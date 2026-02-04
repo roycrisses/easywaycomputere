@@ -58,6 +58,14 @@ ul {
     gap: 30px;
 }
 
+.text-orange {
+    color: var(--primary-orange);
+}
+
+.text-sky {
+    color: var(--primary-sky);
+}
+
 /* Typography */
 h1,
 h2,
