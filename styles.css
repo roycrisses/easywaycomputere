@@ -338,36 +338,108 @@ p {
 
 /* Footer */
 .footer {
-    padding: 40px 0;
-    background-color: white;
-    border-top: 1px solid #eee;
+    padding: 80px 0 40px;
+    background-color: #050505;
+    color: #e5e7eb;
+    border-top: 1px solid #1f2937;
 }
 
-.footer-content {
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-brand .footer-logo {
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.footer-links-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    gap: 12px;
+}
+
+.footer-link {
+    color: #9ca3af;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: var(--primary-orange);
+    padding-left: 5px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+.footer-contact-item i {
+    color: var(--primary-orange);
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.footer-contact-item a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid #1f2937;
     text-align: center;
 }
 
-.footer-logo {
-    color: var(--primary-sky);
-    margin-bottom: 5px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
 .footer-copyright {
-    color: var(--text-gray);
+    color: #6b7280;
     font-size: 0.9rem;
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-contact-item {
+        justify-content: center;
+    }
+
+    .footer-link:hover {
+        padding-left: 0;
+    }
+
     .nav-list {
         display: none;
         /* Add JS toggle logic later if needed or a simple mobile menu */
@@ -398,4 +470,18 @@ p {
     .grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Map Styles */
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
+
+.map-iframe {
+    display: block;
+    width: 100%;
 }
